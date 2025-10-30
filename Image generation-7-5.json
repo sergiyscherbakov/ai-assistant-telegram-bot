@@ -1,0 +1,1311 @@
+{
+  "name": "Image generation-7-4",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {
+          "download": true
+        }
+      },
+      "id": "e039b8a4-8ee2-4a0e-8430-f92a0a7aca7c",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -4048,
+        1536
+      ],
+      "webhookId": "generated-webhook-id",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.output === 7 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "id": "06205106-6edb-40de-ae38-df34d8c52425"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Analys_image"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5ddca51d-c459-4004-9ed6-88ea34c31a1f",
+                    "leftValue": "={{ $json.output === 6 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "OCR"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a1e639eb-4a84-44a8-897f-e0cc13ce0651",
+                    "leftValue": "={{ $json.output === 5 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text2speech_description"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5d2fdfca-4197-48f3-b502-5529307e875f",
+                    "leftValue": "={{ $json.output === 4 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text2speech"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9c6348ba-ac64-49f5-8dd4-e0378aafedde",
+                    "leftValue": "={{ $json.output === 3 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "SpeachToText"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "58c62a94-7e38-49fc-8a37-28dd6fc80504",
+                    "leftValue": "={{ $json.output === 2 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "voiceTOtext"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "65b592a3-eecd-4059-8cef-03bbccb48d9a",
+                    "leftValue": "={{ $json.output === 1 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text2image"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "6ec00930-bb0e-4f50-bd9b-d93f30206bef",
+                    "leftValue": "={{ $json.output === 0 }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "draw_command"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "cad09789-c8a3-4e37-ae8d-e9d3c732651c",
+      "name": "Check Command",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2752,
+        1376
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Telegram Trigger').item.json.message.text }}",
+        "options": {
+          "systemMessage": "Перекласти на англійську мову. Поверни лише один рядок перекладу, без альтернатив або додаткового тексту.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -2288,
+        96
+      ],
+      "id": "059a5fe5-5b6a-42c2-98e5-0c84d1535fed",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-5-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -2336,
+        352
+      ],
+      "id": "20c24666-c30f-4cd5-8068-6402f1f4eb42",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "mx7SIgOvevT7mHto",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ JSON.stringify($('Telegram Trigger').item.json.message.chat.id) }}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.5,
+      "position": [
+        -2208,
+        352
+      ],
+      "id": "f28bff67-2b6c-432a-9088-1908edf4c1dc",
+      "name": "Redis Chat Memory",
+      "credentials": {
+        "redis": {
+          "id": "b6rrOmcPQR1SVwVz",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/flux/dev",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"{{ $json.output }}\"\n}\n\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2000,
+        240
+      ],
+      "id": "baeb9ed0-7033-4e68-8102-f6f478914227",
+      "name": "Create an Image",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "LPrpF5wcGKcGiBNV",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/flux/requests/{{ $json.request_id }}/status",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1552,
+        240
+      ],
+      "id": "eaf02e67-77ef-45b7-9a94-055d627c5540",
+      "name": "Check Status",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "LPrpF5wcGKcGiBNV",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 15
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1776,
+        240
+      ],
+      "id": "ec85a3f1-f177-4069-93f2-b0d395ceb6c2",
+      "name": "Wait",
+      "webhookId": "7feb37b0-953a-458b-a443-9020781a0367"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "COMPLETED",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "7f7a5227-29d0-4c57-8c11-6eab65a23887"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "363b4e66-2a10-4926-b270-9cdf9d605ee4",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "COMPLETED",
+                    "operator": {
+                      "type": "string",
+                      "operation": "notContains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1328,
+        160
+      ],
+      "id": "47500728-0e10-4f88-9017-66435f8b88e2",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1104,
+        336
+      ],
+      "id": "1c1dfe8a-30c0-4276-99a2-1ccfbfb420b2",
+      "name": "Wait1",
+      "webhookId": "e76d9b05-7e47-4926-85d8-020993dc9128"
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/flux/requests/{{ $('Create an Image').item.json.request_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1104,
+        112
+      ],
+      "id": "01592514-55dc-4f88-bebb-e84cf2187f8f",
+      "name": "Get the image",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "LPrpF5wcGKcGiBNV",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "-1003017722848",
+        "file": "={{ $json.images[0].url }}",
+        "additionalFields": {
+          "caption": "="
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -880,
+        112
+      ],
+      "id": "c3f961cb-14eb-446a-967e-c73db40ca978",
+      "name": "Send a photo message1",
+      "webhookId": "de2eb6ba-3bb8-4661-8ab7-d70e79da960e",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1003017722848",
+        "text": "={{ $json.text }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -864,
+        896
+      ],
+      "id": "ed368017-259f-46be-9fcd-447ac38a50f5",
+      "name": "Send a text message3",
+      "webhookId": "5735b52f-5f23-44c9-ba87-d7706f40453a",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1088,
+        896
+      ],
+      "id": "aa027775-74d2-4e70-993b-56a79c53a653",
+      "name": "Transcribe a recording1",
+      "credentials": {
+        "openAiApi": {
+          "id": "mx7SIgOvevT7mHto",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.file }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1376,
+        896
+      ],
+      "id": "94b0fed2-e1ad-4e13-a490-b07ef5ea5133",
+      "name": "Get a file",
+      "webhookId": "0a0da18b-8eea-478d-a915-79942044b2eb",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "Наговоріть  текст або надісліть у файлі що треба озвучити",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1760,
+        1248
+      ],
+      "id": "e359bdc5-6ae9-4d85-a2d5-97466dace238",
+      "name": "Text_to_Speach",
+      "webhookId": "78606478-d0d9-4e4f-8cb2-bcb76a66e340",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "Наговоріть у мікрофон що треба перевести в текст. Або відправте аудіо файл.",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1776,
+        720
+      ],
+      "id": "83bdf69e-d195-41e5-8bc3-8cd9cd887d3e",
+      "name": "Speach_to_Text",
+      "webhookId": "78606478-d0d9-4e4f-8cb2-bcb76a66e340",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Яке зображення ви хочете отримати? Надайте опис.",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -2288,
+        -96
+      ],
+      "id": "e31faa20-8baf-405b-85cd-aa8b7a04dc8c",
+      "name": "Text_to_Image",
+      "webhookId": "78606478-d0d9-4e4f-8cb2-bcb76a66e340",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Отримуємо дані з попередніх нод\nconst redisData = $('Get the value of a key from Redis').first().json;\nconst telegramData = $('Telegram Trigger').first().json;\n\nconst msg = telegramData.message?.text ?? '';\nconst chatId = telegramData.message?.chat?.id ?? 'global';\nconst entities = telegramData.message?.entities ?? [];\n\n// Redis повертає propertyName, а не value\nlet lastCommand = redisData?.propertyName ?? null;\nlet currentCommand = null;\nlet needUpdate = false;\n\n// Перевіряємо чи це команда\nconst isCommand =\n  msg.startsWith('/') &&\n  entities.some(e => e.type === 'bot_command' && e.offset === 0);\n\nif (isCommand) {\n  // Нова команда\n  lastCommand = msg.split(/\\s+/)[0];\n  needUpdate = true;\n} else if (msg) {\n  // Звичайний текст\n  currentCommand = msg;\n}\n\nreturn {\n  json: {\n    ...telegramData,\n    lastCommand,\n    currentCommand,\n    needUpdate,\n    redisKey: `lastCommand_${chatId}`,\n    redisValue: lastCommand\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3600,
+        1536
+      ],
+      "id": "2b437e40-c535-43cf-b785-824356934947",
+      "name": "StorePrevCommand"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8f0f2b68-2bdd-4994-a849-31f5fa12a77b",
+              "leftValue": "={{ $json.needUpdate }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -3376,
+        1536
+      ],
+      "id": "838bbe52-a225-4e19-a743-d26c4b79bb74",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "key": "=lastCommand_{{ $json.message.chat.id }}",
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -3824,
+        1536
+      ],
+      "id": "e53dde90-f3db-46ad-ae32-d76a1adb4574",
+      "name": "Get the value of a key from Redis",
+      "credentials": {
+        "redis": {
+          "id": "b6rrOmcPQR1SVwVz",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "={{ $json.redisKey }}",
+        "value": "={{ $json.redisValue }}"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -3184,
+        1408
+      ],
+      "id": "20c45fbe-b1fc-445d-867a-424b85ab831e",
+      "name": "Set the value of a key in redis",
+      "credentials": {
+        "redis": {
+          "id": "b6rrOmcPQR1SVwVz",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "model": "tts-1-hd",
+        "input": "={{ $('StorePrevCommand').item.json.message.text }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1440,
+        1424
+      ],
+      "id": "438f0353-ba7a-4404-b6ae-054c52871eea",
+      "name": "Generate audio",
+      "credentials": {
+        "openAiApi": {
+          "id": "mx7SIgOvevT7mHto",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendAudio",
+        "chatId": "-1003017722848",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1264,
+        1424
+      ],
+      "id": "e120d4e2-48c9-44c5-9b81-e2da24e4d8fc",
+      "name": "Send an audio file",
+      "webhookId": "42a2b3e2-b24f-47f6-8064-d0357086b02d",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "Надайте зображення яке треба розпізнати",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -1520,
+        1600
+      ],
+      "id": "5c4d855f-6097-422b-b93b-1bd871af5d5c",
+      "name": "OCR",
+      "webhookId": "78606478-d0d9-4e4f-8cb2-bcb76a66e340",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "text": "Необхідно проаналізувати надане зображення та сформулювати опис українською мовою в академічному, безособовому стилі. Текст повинен бути одним зв’язним абзацом без емоційних оцінок, вступних слів, списків, нумерацій, лапок, символів форматування або виділення. Опис має містити конкретний перелік усіх візуальних елементів, таких як об’єкти, написи, кольори, форми, стрілки, лінії, схеми, діаграми, логічні зв’язки між компонентами, пропорції, а також просторове розташування елементів. Якщо на зображенні є текст іншими мовами, його потрібно залишити без перекладу. Завдання — створити точний опис фактичного змісту зображення без інтерпретацій, пояснень чи висновків.",
+        "imageUrls": "={{ \"https://api.telegram.org/file/bot8265287167:AAFawwctSKfwk9pU1la50LjhSA490DmJbvw/\" + $node[\"HTTP Request1\"].json[\"result\"][\"file_path\"] }}\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1168,
+        1776
+      ],
+      "id": "ce5d0abf-c2f6-47d5-b91c-bf26d2c68b31",
+      "name": "Analyze image",
+      "credentials": {
+        "openAiApi": {
+          "id": "mx7SIgOvevT7mHto",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "-1003017722848",
+        "text": "={{ $json.content }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -976,
+        1776
+      ],
+      "id": "fee0d4a3-cb13-43b8-b112-fd48cdfaca8c",
+      "name": "Send a text message",
+      "webhookId": "4037eecb-8e99-4c4f-a0cd-fb86c8976230",
+      "credentials": {
+        "telegramApi": {
+          "id": "uuJaQzR2UO5ZR74e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "//1 - text to image\nconst currentCommand = $input.first().json.currentCommand;\nif (\n  $input.first().json.lastCommand === '/draw' &&\n  currentCommand &&\n  currentCommand !== null &&\n  currentCommand !== undefined &&\n  !currentCommand.includes('/')\n) {\n  return [{ json: { output: 1 } }];\n}\n//3 - speaktotext\nif (\n  $('StorePrevCommand').first().json.lastCommand === '/voice2text' &&\n  ($('Telegram Trigger').first().json.message?.audio?.file_id || $input.first().json.message?.voice?.file_id)\n) {\n  return [{ json: { output: 3 } }];\n}\n//0 - draw\nif ($('StorePrevCommand').first().json.lastCommand === '/draw') {\n  return [{ json: { output: 0 } }];\n}\n//2 - voice2text\nif ($('StorePrevCommand').first().json.lastCommand === '/voice2text') {\n  return [{ json: { output: 2 } }];\n}\n//5 - text2speech with text or document\nif (\n  $('StorePrevCommand').first().json.lastCommand === '/text2speech' &&\n  (\n    (\n      $('StorePrevCommand').first().json.currentCommand &&\n      $('StorePrevCommand').first().json.currentCommand !== null &&\n      $('StorePrevCommand').first().json.currentCommand !== undefined &&\n      $('StorePrevCommand').first().json.currentCommand !== ''\n    ) ||\n    $('Telegram Trigger').first().json.message?.document?.file_id ||\n    $input.first().json.message?.document?.file_id\n  )\n) {\n  return [{ json: { output: 5 } }];\n}\n//4 - text2speech\nif ($('StorePrevCommand').first().json.lastCommand === '/text2speech') {\n  return [{ json: { output: 4 } }];\n}\n//7 - analysimage\nif (\n  $('StorePrevCommand').first().json.lastCommand === '/ocr' &&\n  ($('Telegram Trigger').first().json.message?.photo?.[0]?.file_id || $('Telegram Trigger').first().json.message?.document?.thumb?.file_id)\n) {\n  return [{ json: { output: 7 } }];\n}\n//6 - ocr\nif ($('StorePrevCommand').first().json.lastCommand === '/ocr') {\n  return [{ json: { output: 6 } }];\n}\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2944,
+        1456
+      ],
+      "id": "5b86ed60-2fae-4743-ab15-5854d00e4e63",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const triggerData = $('Telegram Trigger').first().json;\nlet fileId = null;\n\nif (triggerData?.message?.voice?.file_id) {\n  fileId = triggerData.message.voice.file_id;\n} else if (triggerData?.message?.audio?.file_id) {\n  fileId = triggerData.message.audio.file_id;\n}\n\nif (!fileId) {\n  throw new Error(\"Не знайдено звукового файлу в audio або voice\");\n}\n\nfileId = fileId.trim();\n\nreturn [\n  {\n    json: {\n      file: fileId\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1632,
+        880
+      ],
+      "id": "acb6a4a9-014a-4886-a1f4-55311657fe85",
+      "name": "JS-FOR GE A FILE TELEGRAM"
+    },
+    {
+      "parameters": {
+        "content": "/voice2text",
+        "height": 544,
+        "width": 1360
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1888,
+        656
+      ],
+      "typeVersion": 1,
+      "id": "d7810b82-e8ba-4068-aeb1-362ce6de004b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "/draw",
+        "height": 720,
+        "width": 1952
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2512,
+        -128
+      ],
+      "typeVersion": 1,
+      "id": "d2411646-78a2-4fc2-b196-1c256ea06d2e",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "/text2speech",
+        "height": 352,
+        "width": 720
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1808,
+        1216
+      ],
+      "typeVersion": 1,
+      "id": "180d0fab-2994-408b-a214-f27d835948be",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "/ocr",
+        "height": 368,
+        "width": 944
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1680,
+        1584
+      ],
+      "typeVersion": 1,
+      "id": "16f0f05b-5a5b-45fc-ad6a-c705cde52f86",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "jsCode": "const telegramData = $('Telegram Trigger').first().json.message;\nlet fileId = null;\n\nif (telegramData.photo && telegramData.photo[0] && telegramData.photo[0].file_id) {\n  fileId = telegramData.photo[0].file_id;\n} else if (telegramData.document && telegramData.document.thumb && telegramData.document.thumb.file_id) {\n  fileId = telegramData.document.thumb.file_id;\n}\n\nreturn [{ json: { file_id: fileId } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1552,
+        1776
+      ],
+      "id": "13497605-d283-4462-95e8-5b54b8212eee",
+      "name": "AnalysImage"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.telegram.org/bot8265287167:AAFawwctSKfwk9pU1la50LjhSA490DmJbvw/getFile\n",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "file_id",
+              "value": "={{ $json.file_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1376,
+        1776
+      ],
+      "id": "ec6275f9-6d34-42fe-9391-2b1a5b269006",
+      "name": "HTTP Request1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get the value of a key from Redis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Command": {
+      "main": [
+        [
+          {
+            "node": "AnalysImage",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "OCR",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Generate audio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Text_to_Speach",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "JS-FOR GE A FILE TELEGRAM",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Speach_to_Text",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Text_to_Image",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Create an Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an Image": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Status": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Check Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Get the image",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Check Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get the image": {
+      "main": [
+        [
+          {
+            "node": "Send a photo message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe a recording1": {
+      "main": [
+        [
+          {
+            "node": "Send a text message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "node": "Transcribe a recording1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "StorePrevCommand": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Set the value of a key in redis",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get the value of a key from Redis": {
+      "main": [
+        [
+          {
+            "node": "StorePrevCommand",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set the value of a key in redis": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate audio": {
+      "main": [
+        [
+          {
+            "node": "Send an audio file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze image": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Check Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JS-FOR GE A FILE TELEGRAM": {
+      "main": [
+        [
+          {
+            "node": "Get a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AnalysImage": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Analyze image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "cf25aeaf-2c7a-430e-b2ab-f46956a34af2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2dd2c1a74433856bc1df11e379f0a24f8925b2f890adfce0db6476011a0cc9ce"
+  },
+  "id": "beavMf13FOUrVoEx",
+  "tags": []
+}

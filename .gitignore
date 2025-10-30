@@ -1,0 +1,9 @@
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.docx
+*.pptx
+*.txt
+.DS_Store
+Thumbs.db
